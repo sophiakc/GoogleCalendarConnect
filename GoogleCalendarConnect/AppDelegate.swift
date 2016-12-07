@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import AppAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    // property of the app's AppDelegate
+    var currentAuthorizationFlow: OIDAuthorizationFlowSession!
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if currentAuthorizationFlow!.resumeAuthorizationFlow(with: url){
+            currentAuthorizationFlow = nil
+            return true
+        }
+        
+        // Your additional URL handling (if any) goes here.
+        
+        return false
+    }
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
