@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '818236569E9DBCA28135B887D630B6F7'
-               BlueprintName = 'Pods-GoogleCalendarConnectTests'
+               BlueprintIdentifier = '53F6FDC13F620DEF25DC511D8B05C851'
+               BlueprintName = 'AppAuth'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-GoogleCalendarConnectTests.framework'>
+               BuildableName = 'AppAuth.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
